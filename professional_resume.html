@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muhammad Tanveer - Technical Lead</title>
+    <style>
+        @media print {
+            @page {
+                size: A4;
+                margin: 0.5in 0.75in 0.75in 0.75in;
+                /* top, right, bottom, left */
+            }
+
+            body {
+                margin: 0;
+                font-size: 11px;
+                line-height: 1.3;
+            }
+
+            .page-break {
+                page-break-before: always;
+            }
+
+            .no-print {
+                display: none;
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px 30px 40px 30px;
+            /* top, right, bottom, left */
+            background-color: #ffffff;
+            color: #333;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .container {
+            max-width: 210mm;
+            /* A4 width */
+            margin: 0 auto;
+            background: white;
+            min-height: 297mm;
+            /* A4 height */
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid #2c3e50;
+            padding-bottom: 15px;
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+            font-weight: 700;
+            color: #2c3e50;
+            letter-spacing: 1px;
+        }
+
+        .header .title {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin: 5px 0 15px 0;
+            font-weight: 500;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            font-size: 10px;
+        }
+
+        .contact-info span {
+            color: #2c3e50;
+        }
+
+        .section {
+            margin-bottom: 20px;
+        }
+
+        .section-title {
+            font-size: 14px;
+            font-weight: 700;
+            color: #2c3e50;
+            border-bottom: 1px solid #bdc3c7;
+            padding-bottom: 3px;
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .summary {
+            text-align: justify;
+            color: #555;
+            font-size: 11px;
+            line-height: 1.5;
+        }
+
+        .experience-item {
+            margin-bottom: 18px;
+        }
+
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 8px;
+        }
+
+        .job-title {
+            font-weight: 700;
+            color: #2c3e50;
+            font-size: 12px;
+        }
+
+        .company {
+            color: #7f8c8d;
+            font-size: 11px;
+            font-style: italic;
+        }
+
+        .date {
+            color: #7f8c8d;
+            font-size: 10px;
+            font-weight: 500;
+        }
+
+        .responsibilities {
+            margin-top: 8px;
+        }
+
+        .responsibilities ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .responsibilities li {
+            margin-bottom: 6px;
+            color: #555;
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .skill-category {
+            margin-bottom: 12px;
+        }
+
+        .skill-category h4 {
+            margin: 0 0 6px 0;
+            font-size: 11px;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .skill-category p {
+            margin: 0;
+            font-size: 10px;
+            color: #555;
+            line-height: 1.3;
+        }
+
+        .project-item {
+            margin-bottom: 15px;
+        }
+
+        .project-title {
+            font-weight: 700;
+            color: #2c3e50;
+            font-size: 12px;
+            margin-bottom: 4px;
+        }
+
+        .project-tech {
+            color: #7f8c8d;
+            font-size: 10px;
+            font-style: italic;
+            margin-bottom: 6px;
+        }
+
+        .project-description ul {
+            margin: 0;
+            padding-left: 18px;
+        }
+
+        .project-description li {
+            margin-bottom: 4px;
+            color: #555;
+            font-size: 10px;
+            line-height: 1.3;
+        }
+
+        .education-item {
+            margin-bottom: 15px;
+        }
+
+        .degree {
+            font-weight: 700;
+            color: #2c3e50;
+            font-size: 12px;
+        }
+
+        .university {
+            color: #7f8c8d;
+            font-size: 11px;
+            font-style: italic;
+        }
+
+        .two-column {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .certification-item {
+            margin-bottom: 10px;
+        }
+
+        .cert-title {
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 11px;
+        }
+
+        .cert-description {
+            color: #555;
+            font-size: 10px;
+            line-height: 1.3;
+            margin-top: 3px;
+        }
+
+        .highlight {
+            background-color: #ecf0f1;
+            padding: 2px 4px;
+            border-radius: 3px;
+            font-weight: 500;
+        }
+
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #3498db;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .print-button:hover {
+            background: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="print-button no-print" onclick="window.print()">Print/Save as PDF</button>
+
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>MUHAMMAD TANVEER</h1>
+            <div class="title">Technical Lead | Senior Laravel Developer</div>
+            <div class="contact-info">
+                <a href="mailto:mtanveerraj002@gmail.com" target="_blank" style="color: #117ae4; text-decoration: underline;">
+                    <span>📧 mtanveerraj002@gmail.com</span>
+                </a>
+                <span>📱 +92 300 288 4058</span>
+                <span>📍 Lahore, Punjab, Pakistan</span>
+                <a href="https://linkedin.com/in/muhammad-tanveer002" target="_blank">
+                    <span>💼 LinkedIn: linkedin.com/in/muhammad-tanveer002</span>
+                </a>
+                <a href="https://github.com/mtanveer002" target="_blank">
+                    <span>🌐 GitHub: github.com/mtanveer002</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- Professional Summary -->
+        <div class="section">
+            <div class="section-title">Professional Summary</div>
+            <div class="summary">
+                Technical Lead with <span class="highlight">6+ years</span> of experience architecting scalable web
+                applications using Laravel ecosystem. Led cross-functional teams of <span class="highlight">5+
+                    developers</span>, delivering <span class="highlight">15+ high-performance projects</span> with
+                99.9% uptime. Expertise in TALL Stack, AWS cloud infrastructure, and agile methodologies, with proven
+                track record of optimizing application performance by up to <span class="highlight">83%</span> and
+                reducing development costs by <span class="highlight">30%</span>.
+            </div>
+        </div>
+
+        <!-- Technical Skills -->
+        <div class="section">
+            <div class="section-title">Technical Skills</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Programming Languages</h4>
+                    <p>PHP, JavaScript (ES6+), SQL, HTML5, CSS3</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Frameworks & Libraries</h4>
+                    <p>Laravel, Vue.js, React.js, Next.js, Alpine.js, Livewire, Node.js</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Databases</h4>
+                    <p>MySQL, PostgreSQL, MongoDB</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Cloud & DevOps</h4>
+                    <p>AWS, Azure, DigitalOcean, Docker, CI/CD, Apache, Nginx</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Tools & Platforms</h4>
+                    <p>Git, GitHub, Bitbucket, Postman, Jira, Slack, PhpStorm</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Specializations</h4>
+                    <p>API Development, Microservices, Payment Integration (Stripe), OAuth2, JWT</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Soft Skills -->
+        <div class="section">
+            <div class="section-title">Core Competencies</div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h4>Leadership & Management</h4>
+                    <p>Team Leadership, Project Management, Strategic Planning, Cross-functional Collaboration</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Technical Leadership</h4>
+                    <p>Architecture Design, Code Review, Technical Mentoring, Performance Optimization</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Communication</h4>
+                    <p>Client Engagement, Stakeholder Management, Technical Documentation, Presentation Skills</p>
+                </div>
+                <div class="skill-category">
+                    <h4>Problem Solving</h4>
+                    <p>Critical Thinking, Analytical Skills, Root Cause Analysis, Innovation & Adaptability</p>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">Professional Experience</div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Technical Lead / Full Stack Developer</div>
+                        <div class="company">Topdot Pvt. Ltd, Lahore</div>
+                    </div>
+                    <div class="date">Jan 2023 - Present</div>
+                </div>
+                <div class="responsibilities">
+                    <ul>
+                        <li>Led cross-functional team of <strong>5 developers</strong>, reducing project delivery time
+                            by <strong>30%</strong> and improving code quality scores by <strong>25%</strong> through
+                            automated testing and code review processes</li>
+                        <li>Architected and delivered <strong>8+ scalable web applications</strong> serving 10,000+
+                            daily active users with <strong>99.9% uptime</strong></li>
+                        <li>Implemented agile methodologies including sprint planning, daily stand-ups, and
+                            retrospectives, resulting in <strong>40% faster feature delivery</strong></li>
+                        <li>Established CI/CD pipelines using Docker, reducing deployment time by <strong>60%</strong>
+                            and eliminating production errors</li>
+                        <li>Mentored junior developers and conducted code reviews, improving team productivity by
+                            <strong>35%</strong>
+                        </li>
+                        <li>Collaborated with stakeholders to translate business requirements into technical solutions,
+                            ensuring 100% project alignment with business goals</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">Senior Laravel/Vue.js Developer</div>
+                        <div class="company">Technology Brainz, Lahore</div>
+                    </div>
+                    <div class="date">Jan 2020 - Dec 2022</div>
+                </div>
+                <div class="responsibilities">
+                    <ul>
+                        <li>Architected backend solutions using Laravel for <strong>12+ complex web
+                                applications</strong>, ensuring scalability and security best practices</li>
+                        <li>Designed and integrated <strong>50+ RESTful APIs</strong> with frontend and mobile teams,
+                            improving data flow efficiency by <strong>45%</strong></li>
+                        <li>Managed server infrastructure on AWS and DigitalOcean, achieving <strong>99.8%
+                                uptime</strong> and reducing hosting costs by <strong>20%</strong></li>
+                        <li>Automated deployment processes and SSL certificate management, reducing manual deployment
+                            time by <strong>80%</strong></li>
+                        <li>Performed root cause analysis and troubleshooting, resolving <strong>95%</strong> of
+                            production issues within 2 hours</li>
+                        <li>Mentored team members on emerging Laravel features and best practices, improving overall
+                            code quality</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="experience-item">
+                <div class="job-header">
+                    <div>
+                        <div class="job-title">PHP/Laravel Developer</div>
+                        <div class="company">Ikonic Solution, Islamabad</div>
+                    </div>
+                    <div class="date">May 2019 - Nov 2020</div>
+                </div>
+                <div class="responsibilities">
+                    <ul>
+                        <li>Developed <strong>6+ web applications</strong> using PHP and Laravel framework, following
+                            industry best practices</li>
+                        <li>Built and maintained <strong>30+ web services (APIs)</strong> supporting iOS and Android
+                            mobile applications</li>
+                        <li>Created comprehensive technical documentation and maintenance manuals, reducing onboarding
+                            time by <strong>50%</strong></li>
+                        <li>Implemented system integrations between different platforms, improving data synchronization
+                            by <strong>60%</strong></li>
+                        <li>Researched and adopted new technologies, contributing to <strong>15%</strong> improvement in
+                            development efficiency</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Key Projects -->
+        <div class="section">
+            <div class="section-title">Key Projects</div>
+
+            <div class="project-item">
+                <div class="project-title">
+                    <a href="https://sound.com/" target="_blank">Sound.com</a> – Music Streaming Platform</div>
+                <div class="project-tech">Tech Stack: Laravel, Livewire 3, Alpine.js, MySQL, AWS, Node.js</div>
+                <div class="project-description">
+                    <ul>
+                        <li>Developed royalty-free music streaming platform serving <strong>5,000+ content
+                                creators</strong></li>
+                        <li>Built persistent audio player with cross-page functionality using Livewire 3, improving user
+                            engagement by <strong>45%</strong></li>
+                        <li>Built comprehensive mood, genre, and speed-based categorization system with multi-parameter
+                            filtering</li>
+                        <li>Optimized page load speed from 12s to <strong>under 2s (83% improvement)</strong> through
+                            code optimization and CDN implementation</li>
+                        <li>Implemented dynamic filtering system processing <strong>10,000+ tracks</strong> with
+                            real-time search capabilities</li>
+                        <li><strong>Business Impact:</strong> Reduced bounce rate by 30% and increased user session
+                            duration by 65%</li>
+                        <li>Implemented AWS S3 integration for secure audio file storage and streaming with CDN
+                            optimization</li>
+                        <li>Integrated "Start at the Good Part" feature allowing songs to begin at most popular segments
+                        </li>
+                        <li>Developed custom chunked loading for infinite scroll pagination, solving Livewire's default
+                            overlapping issues</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title">
+                    <a href="https://recovery.shop/" target="_blank">Recovery Shop</a> – Healthcare Equipment Platform</div>
+                <div class="project-tech">Tech Stack: Laravel, Livewire 3, Alpine.js, MySQL, AWS, Stripe API</div>
+                <div class="project-description">
+                    <ul>
+                        <li>Developed comprehensive healthcare platform for equipment rental and purchase with
+                            <strong>multi-vendor support</strong>
+                        </li>
+                        <li>Integrated Apple Pay and Stripe payment systems with intelligent routing based on contract
+                            ownership</li>
+                        <li>Implemented dynamic rental options and physician-based product catalogs serving <strong>200+
+                                healthcare providers</strong></li>
+                        <li>Built secure payment processing with encrypted API key management and PCI compliance</li>
+                        <li><strong>Business Impact:</strong> Processed $100K+ in transactions with 99.9% payment
+                            success rate</li>
+                        <li>Solved Apple Pay integration challenges for cross-platform compatibility and international
+                            testing</li>
+                        <li>Created physician landing pages with customized product visibility based on admin allocation
+                        </li>
+                        <li>Implemented flexible commission and invoicing system with automated payment distribution
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-item">
+                <div class="project-title"><a href="https://rafka.com/" target="_blank">Rafka</a>– Premium Jewelry Platform</div>
+                <div class="project-tech">Tech Stack: Laravel, Livewire 3, GrapesJS, MySQL, AWS</div>
+                <div class="project-description">
+                    <ul>
+                        <li>Built premium jewelry brand website with drag-and-drop page builder using GrapesJS</li>
+                        <li>Developed custom CMS allowing marketing team to manage content independently, reducing
+                            development requests by <strong>70%</strong></li>
+                        <li>Implemented responsive design with mobile optimization, improving mobile conversion rate by
+                            <strong>40%</strong>
+                        </li>
+                        <li>Integrated dynamic product data injection with real-time inventory management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- Page Break -->
+        <div class="page-break"></div>
+
+        <!-- Bottom margin spacer for page 1 -->
+        <!-- <div style="height: 20px;"></div> -->
+        <!-- Education & Certifications -->
+        <div class="section">
+            <div class="two-column">
+                <div>
+                    <div class="section-title">Education</div>
+                    <div class="education-item">
+                        <div class="degree">Bachelor of Science in Computer Science</div>
+                        <div class="university">Government College University Faisalabad</div>
+                        <div class="date" style="margin-top: 5px;">2015 - 2019</div>
+                        <div style="margin-top: 8px; font-size: 10px; color: #555;">
+                            <strong>Relevant Coursework:</strong> Data Structures & Algorithms, Web Development,
+                            Database Systems, Software Engineering
+                        </div>
+                        <div style="margin-top: 8px; font-size: 10px; color: #555;">
+                            <strong>Final Year Project:</strong> Voice-Controlled Home Automation System using Arduino
+                            and IoT components
+                        </div>
+                    </div>
+                </div>
+
+                <div>
+                    <div class="section-title">Certifications</div>
+                    <div class="certification-item">
+                        <div class="cert-title">Technical Support Fundamentals</div>
+                        <div class="cert-description">Core IT support skills including troubleshooting and system
+                            configuration</div>
+                    </div>
+                    <div class="certification-item">
+                        <div class="cert-title">Command Line Basics in Linux</div>
+                        <div class="cert-description">Proficient in Linux terminal operations and system administration
+                        </div>
+                    </div>
+                    <div class="certification-item">
+                        <div class="cert-title">Relational Database and SQL</div>
+                        <div class="cert-description">Advanced database design and SQL query optimization</div>
+                    </div>
+                    <div class="certification-item">
+                        <div class="cert-title">JavaScript ES6+</div>
+                        <div class="cert-description">Modern JavaScript features and best practices</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Languages & Additional Info -->
+        <div class="section">
+            <div class="two-column">
+                <div>
+                    <div class="section-title">Languages</div>
+                    <div style="font-size: 11px; color: #555;">
+                        <strong>Urdu:</strong> Native Proficiency<br>
+                        <strong>English:</strong> Professional Working Proficiency
+                    </div>
+                </div>
+
+                <div>
+                    <div class="section-title">Professional Tools</div>
+                    <div style="font-size: 10px; color: #555; line-height: 1.4;">
+                        <strong>Project Management:</strong> Jira, Trello, Slack<br>
+                        <strong>Version Control:</strong> Git, GitHub, GitLab, Bitbucket<br>
+                        <strong>Development:</strong> PhpStorm, VS Code, Chrome DevTools<br>
+                        <strong>Design:</strong> GrapesJS, Bootstrap, Tailwind CSS
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
