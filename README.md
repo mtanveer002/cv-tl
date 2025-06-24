@@ -10,3 +10,29 @@ I’m a Technical Lead and Senior Laravel Developer with 6+ years of experience 
 🔗 [GitHub](https://github.com/mtanveer002)
 
 ---
+
+## 🛠️ Technical Skills
+
+**Languages:** PHP, JavaScript (ES6+), SQL, HTML5, CSS3  
+**Frameworks & Libraries:** Laravel, Vue.js, React.js, Livewire, Alpine.js, Node.js  
+**Databases:** MySQL, PostgreSQL, MongoDB  
+**Tools & Platforms:** Git, GitHub, Bitbucket, Docker, Postman, PhpStorm  
+**Cloud & DevOps:** AWS, DigitalOcean, Nginx, Apache, CI/CD pipelines  
+**Specialties:** API Development, Microservices, OAuth2, JWT, Stripe Integration
+
+---
+
+## 💼 Core Competencies
+
+- ✅ Technical Leadership & Team Management  
+- ✅ Scalable Architecture Design (Laravel, Microservices)  
+- ✅ RESTful & Real-Time API Development  
+- ✅ Cloud Infrastructure (AWS, DigitalOcean, Docker)  
+- ✅ Agile & Scrum Methodologies  
+- ✅ Performance Optimization & Code Quality  
+- ✅ CI/CD Automation & DevOps Best Practices  
+- ✅ Cross-Functional Collaboration  
+- ✅ Payment Integration (Stripe, Apple Pay)  
+- ✅ Security Compliance (OAuth2, JWT, PCI-DSS)  
+- ✅ Client Communication & Requirement Analysis  
+- ✅ Mentorship, Code Review, and Developer Onboarding  
