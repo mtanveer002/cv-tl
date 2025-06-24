@@ -8,6 +8,7 @@ I’m a Technical Lead and Senior Laravel Developer with 6+ years of experience 
 📱 [Phone] +92 300 288 4058  
 🔗 [LinkedIn](https://linkedin.com/in/muhammad-tanveer002)  
 🔗 [GitHub](https://github.com/mtanveer002)
+🔗 [Live Link](https://mtanveer002.github.io/cv-tl/)
 
 ---
 
